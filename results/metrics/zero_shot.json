@@ -1,0 +1,48 @@
+{
+  "system": "Zero-shot prompting (Qwen/Qwen3-4B-Instruct-2507)",
+  "prompt": "v2_dataset_conventions",
+  "val_macro_f1_by_prompt": {
+    "v1_generic": 0.6243218092257512,
+    "v2_dataset_conventions": 0.6472048254433708
+  },
+  "val_macro_f1": 0.6472048254433708,
+  "test": {
+    "all": {
+      "macro_f1": 0.634865729198919,
+      "accuracy": 0.6995596477181746,
+      "f1_negative": 0.6959349593495935,
+      "f1_neutral": 0.4096662830840046,
+      "f1_positive": 0.7989959451631589,
+      "n": 4996
+    },
+    "arabic": {
+      "macro_f1": 0.6396641955409974,
+      "accuracy": 0.7027403622851834,
+      "f1_negative": 0.7157142857142857,
+      "f1_neutral": 0.40587449933244324,
+      "f1_positive": 0.7974038015762633,
+      "n": 4306
+    },
+    "latin": {
+      "macro_f1": 0.5685748886606653,
+      "accuracy": 0.6787974683544303,
+      "f1_negative": 0.490272373540856,
+      "f1_neutral": 0.41,
+      "f1_positive": 0.80545229244114,
+      "n": 632
+    },
+    "mixed": {
+      "macro_f1": 0.6834700783386641,
+      "accuracy": 0.72,
+      "f1_negative": 0.5882352941176471,
+      "f1_neutral": 0.6111111111111112,
+      "f1_positive": 0.851063829787234,
+      "n": 50
+    }
+  },
+  "test_macro_f1_ci95": [
+    0.6200043964065516,
+    0.6492171024767974
+  ],
+  "comments_per_second": 15.302393300978505
+}

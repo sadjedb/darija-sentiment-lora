@@ -1,0 +1,16 @@
+# Install PyTorch with CUDA first, matching your driver (see https://pytorch.org/get-started/locally/), e.g.
+#   pip install torch --index-url https://download.pytorch.org/whl/cu128
+torch>=2.7
+transformers>=5.8
+peft>=0.21
+accelerate>=1.13
+datasets>=4.0
+huggingface_hub>=1.0
+scikit-learn>=1.7
+pandas>=2.2
+numpy>=2.0
+matplotlib>=3.9
+tqdm>=4.66
+jupyterlab>=4.0
+ipykernel>=7.0
+nbconvert>=7.16
