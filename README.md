@@ -2,7 +2,7 @@
 
 Fine-tuning an open-weight language model (Qwen3-4B) with LoRA to classify the sentiment of Algerian Darija comments, in both Arabic script and Latin script ("Arabizi"). It's compared against a classic TF-IDF model and against zero-shot prompting of the same LLM.
 
-**Adapter on the Hugging Face Hub:** [YOUR_HF_USERNAME/qwen3-4b-darija-sentiment-lora](https://huggingface.co/YOUR_HF_USERNAME/qwen3-4b-darija-sentiment-lora)
+**Adapter on the Hugging Face Hub:** [Sadjed123/qwen3-4b-darija-sentiment-lora](https://huggingface.co/Sadjed123/qwen3-4b-darija-sentiment-lora)
 
 ---
 
@@ -114,7 +114,7 @@ The data (`data/`) and the trained weights (`outputs/`) are not committed. The d
 You'll need Python 3.10+ and, for the LLM parts, an NVIDIA GPU with at least 12 GB of memory. The TF-IDF notebook runs on any laptop.
 
 ```bash
-git clone https://github.com/YOUR_GITHUB/darija-sentiment-lora.git
+git clone https://github.com/sadjedb/darija-sentiment-lora.git
 cd darija-sentiment-lora
 
 # PyTorch with CUDA first (pick the right command for your setup at pytorch.org)
@@ -141,7 +141,7 @@ If you're short on GPU memory, `--batch-size 8 --grad-accum 2` gives the same ef
 
 ```bash
 hf auth login                                   # token with write access
-python scripts/push_to_hub.py --repo-id YOUR_HF_USERNAME/qwen3-4b-darija-sentiment-lora
+python scripts/push_to_hub.py --repo-id Sadjed123/qwen3-4b-darija-sentiment-lora
 ```
 
 This uploads only the adapter (132 MB), the model card and the confusion-matrix figure. The 8 GB base model stays on Qwen's repo.
@@ -154,7 +154,7 @@ from peft import PeftModel
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
 base_id = "Qwen/Qwen3-4B-Instruct-2507"
-adapter_id = "YOUR_HF_USERNAME/qwen3-4b-darija-sentiment-lora"
+adapter_id = "Sadjed123/qwen3-4b-darija-sentiment-lora"
 
 tokenizer = AutoTokenizer.from_pretrained(base_id)
 model = AutoModelForSequenceClassification.from_pretrained(
